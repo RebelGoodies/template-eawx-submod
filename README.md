@@ -4,6 +4,23 @@
 
 Template repository for any EaWX submod.
 
+## Setup Upstream
+
+**Create vendor branch**
+```
+git checkout --orphan vendor-eawx
+rm -r .
+mkdir -p mod
+```
+
+**Import and merge upstream files**
+```
+git add mod
+git commit -m "Import EaWX mod upstream files"
+git checkout main
+git merge vendor-eawx --allow-unrelated-histories
+```
+
 ## EaWX Mods
 
 - Thrawn's Revenge (TR)
