@@ -27,23 +27,23 @@ Track unmodified EaWX source for easier comparing and merging.
 
 **Create vendor branch**
 ```
-git checkout --orphan vendor-eawx
-rm -r .
+git checkout --orphan vendor/eawx
+git rm -rf .
 mkdir -p mod
 ```
 
-**Import and merge upstream files**
+**Import and merge upstream files once**
 ```
 git add mod
 git commit -m "Import EaWX mod upstream files"
 git checkout main
-git merge vendor-eawx --allow-unrelated-histories
+git merge vendor/eawx --allow-unrelated-histories
 ```
 
-**Merge updates**
+**Merge upstream updates**
 ```
 git checkout main
-git merge -X theirs vendor-eawx
+git merge -X theirs vendor/eawx
 ```
 
 ## EaWX Mods
