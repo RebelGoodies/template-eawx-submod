@@ -4,7 +4,26 @@
 
 Template repository for any EaWX submod.
 
+## Setup local
+
+Either clone or pull to a directory, where `<URL>` is the https or SSH link to the repository.
+
+**Clone to new directory**
+```
+git clone <URL>
+```
+
+**Use existing directory**
+```
+git init -b main
+git remote add origin <URL>
+git pull origin main
+git branch --set-upstream-to=origin/main main
+```
+
 ## Setup Upstream
+
+Track unmodified EaWX source for easier comparing and merging.
 
 **Create vendor branch**
 ```
@@ -19,6 +38,12 @@ git add mod
 git commit -m "Import EaWX mod upstream files"
 git checkout main
 git merge vendor-eawx --allow-unrelated-histories
+```
+
+**Merge updates**
+```
+git checkout main
+git merge -X theirs vendor-eawx
 ```
 
 ## EaWX Mods
