@@ -1,6 +1,6 @@
 **Disclaimer**: This project is not affiliated with the EaWX team.
 
-<img src="mod/Splash.png" alt="Splash image" width="128" style="float: right; margin-left: 1em; margin-bottom: 1em;">
+<img src="mod/Splash.png" alt="Splash image" height="128" style="float: right; margin-left: 1em; margin-bottom: 1em;">
 
 # template-eawx-submod
 
@@ -19,8 +19,7 @@ git clone <URL>
 ```
 git init -b main
 git remote add origin <URL>
-git pull origin main
-git branch --set-upstream-to=origin/main main
+git pull --set-upstream origin main
 ```
 
 ## Setup Upstream
@@ -53,6 +52,8 @@ git merge -X theirs vendor/eawx
 - Thrawn's Revenge (TR)
 - Fall of the Republic (FotR)
 - Revan's Revenge (RR)
+
+---
 
 # License
 
